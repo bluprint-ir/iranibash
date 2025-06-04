@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>ایرانی‌ساز سایت‌ها</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="../assets/icons/icon48.png" alt="آیکون ایرانی‌ساز" class="logo">
+      <h3>ایرانی‌ساز سایت‌ها</h3>
+    </div>
+    <div id="status-container">
+      <p>وضعیت برای: <strong id="current-site-name">درحال بارگذاری...</strong></p>
+      <div id="toggle-wrapper" style="display: none;">
+        <label class="switch">
+          <input type="checkbox" id="toggle-site">
+          <span class="slider round"></span>
+        </label>
+        <span id="status-text"></span>
+      </div>
+    </div>
+    <p id="not-supported-message" class="message" style="display:none;">این سایت هنوز پشتیبانی نمی‌شود.</p>
+    <p id="error-message" class="message error" style="display:none;">خطا در دریافت اطلاعات.</p>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

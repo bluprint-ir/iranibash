@@ -1,0 +1,54 @@
+/* modules/chatgpt/chatgpt.css */
+
+/* استفاده از فونت وزیرمتن از CDN */
+@import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
+
+/* اعمال فونت و راست‌چینی به بخش‌های اصلی چت جی پی تی */
+/* این سلکتورها ممکن است با آپدیت‌های سایت ChatGPT تغییر کنند و نیاز به بروزرسانی داشته باشند */
+body,
+textarea,
+button,
+input,
+[class*="text-message"], /* کلاس عمومی برای پیام‌ها */
+[class^="react-scroll-to-bottom--css"] /* کانتینر اصلی پیام‌ها */
+ {
+  font-family: 'Vazirmatn', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+/* کانتینر اصلی که پیام‌ها در آن نمایش داده می‌شوند */
+/* این سلکتور باید با دقت از طریق Inspect Element پیدا شود */
+/* مثال برای یکی از ساختارهای رایج ChatGPT */
+main .group, /* هر گروه پیام (یوزر و اسیستنت) */
+main .w-full .text-base /* هر پیام جداگانه */
+{
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+/* اصلاح جهت‌گیری برای بخش‌های خاصی که باید چپ‌چین بمانند (مانند بلوک‌های کد) */
+main pre,
+main code,
+main .prose pre, /* کلاس رایج برای کد در markdown */
+main .prose code {
+  direction: ltr !important;
+  text-align: left !important;
+  font-family: 'Consolas', 'Monaco', monospace !important; /* فونت مناسب برای کد */
+}
+
+/* ممکن است نیاز باشد برای input اصلی هم جهت را مشخص کنید */
+textarea[data-id="root"] {
+    direction: rtl !important;
+    text-align: right !important;
+    font-family: 'Vazirmatn', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+/* استایل برای دکمه ارسال پیام */
+form button[class*="bottom"] {
+    /* اگر نیاز به تغییر موقعیت یا استایل دکمه ارسال باشد */
+}
+
+/* جلوگیری از بهم ریختگی متن فارسی و انگلیسی در یک خط */
+/* این بخش ممکن است پیچیده باشد و نیاز به تست دقیق داشته باشد */
+[class*="markdown"] p, [class*="markdown"] span {
+    /* unicode-bidi: plaintext; (با احتیاط استفاده شود) */
+}

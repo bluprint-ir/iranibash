@@ -1,0 +1,35 @@
+/* modules/common/common.css */
+
+/*
+  می‌توانید فونت‌های خود را اینجا تعریف کنید.
+  اگر فونت‌ها را همراه اکستنشن ارائه می‌دهید (در web_accessible_resources تعریف شده):
+*/
+/*
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('chrome-extension://__MSG_@@extension_id__/assets/fonts/Vazirmatn-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('chrome-extension://__MSG_@@extension_id__/assets/fonts/Vazirmatn-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+*/
+
+/*
+  یا از CDN استفاده کنید:
+  @import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
+*/
+
+/* یک استایل عمومی برای تست */
+/*
+body {
+  font-family: 'Vazirmatn', Arial, sans-serif !important;
+}
+*/

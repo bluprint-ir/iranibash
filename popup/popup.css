@@ -1,0 +1,142 @@
+/* popup/popup.css */
+body {
+    font-family: 'Vazirmatn', 'Tahoma', sans-serif; /* فونت وزیرمتن یا تاهوما */
+    width: 280px; /* کمی عریض‌تر برای جا شدن متن */
+    padding: 15px;
+    direction: rtl;
+    text-align: right;
+    background-color: #f4f6f8;
+    color: #333;
+    font-size: 14px;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* افزایش فاصله */
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+  }
+  
+  .header .logo {
+    width: 32px; /* کمی بزرگتر */
+    height: 32px;
+  }
+  
+  .header h3 {
+    margin: 0;
+    font-size: 16px; /* کمی بزرگتر */
+    color: #007bff; /* رنگ آبی برای عنوان */
+  }
+  
+  #status-container {
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  #status-container p {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  
+  #current-site-name {
+    color: #555;
+    font-weight: bold;
+  }
+  
+  #toggle-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  
+  /* استایل برای toggle switch */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 28px;
+    flex-shrink: 0; /* جلوگیری از کوچک شدن در فلکس */
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #28a745; /* سبز برای فعال */
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #28a745;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(22px);
+  }
+  
+  .slider.round {
+    border-radius: 28px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  #status-text {
+    font-size: 13px;
+    color: #666;
+  }
+  
+  .message {
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 13px;
+  }
+  
+  .message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+  }
+  
+  #not-supported-message {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+  }
